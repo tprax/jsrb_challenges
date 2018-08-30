@@ -50,5 +50,24 @@ def vowels(string)
   puts "Vowels: " + @vowel.to_s
 end
 
+#Write a script that accepts a number as a parameter
+# and check the number is prime or not.
 
-
+puts "Enter a number."
+number = gets.to_i
+@prime = []
+@not_prime = []
+def prime(num)
+  x = 2
+  while x <= num
+    if num % x == 0
+      @prime << x
+    end
+    x += 1
+  end
+  if @prime.length < 2
+    puts "It is a Prime Number"
+  else
+    puts "Sorry not a Prime Number"
+  end
+end
